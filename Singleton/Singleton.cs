@@ -10,16 +10,18 @@ namespace Singleton
         {
             get
             {
-                if(instancia == null)                
-                   instancia = new Singleton();
-
+                if (instancia == null)
+                {
+                    instancia = new Singleton();
+                    Console.WriteLine("G");
+                }
                 return instancia;
             }
         }
 
         public void Mensagem(string msg)
         {
-            Console.Write(msg);
+            Console.WriteLine(msg);
         }
     }
 }
